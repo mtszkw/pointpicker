@@ -27,3 +27,5 @@ if __name__ == '__main__':
     for img_absolute_path in reader:
         points = annotator.run(img_absolute_path)
         print(f'Annotated points ({len(points)}): {points}')
+
+        write_points_csv(points, img_absolute_path[:img_absolute_path.rfind('.')] + '.csv')

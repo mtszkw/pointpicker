@@ -5,7 +5,7 @@ from .annotator import Annotator
 
 
 class PointAnnotator(Annotator):
-    def __init__(self, annotations_limit=None, window_timeout=0):
+    def __init__(self, annotations_limit : int=None, window_timeout : int=0):
         super().__init__(annotations_limit, window_timeout)
 
     def run(self, img_absolute_path : str):

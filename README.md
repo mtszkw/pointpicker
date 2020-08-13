@@ -1,1 +1,1 @@
-# Image Annotator
+# Image Annotation

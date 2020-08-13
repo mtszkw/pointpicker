@@ -13,23 +13,17 @@ Options:
 import pandas as pd
 from docopt import docopt
 
-from annotation import DirectoryReader
-from annotation.annotators import PointAnnotator
+import annotation as ann
 
+def write_points_csv(points, csv_path):
+    df = pd.DataFrame(centroids) 
+    df.to_csv(csv_path, header=False, index=False)
+  
 if __name__ == '__main__':
-    arguments = docopt(__doc__, version='Point Annotator 0.1')
- 
-    # D:/GitLab/simplecalib/test/test_data/calibration/test_data/BLK2GO_invalid_masks_number/01/
-    reader = DirectoryReader(images_dir=arguments['<images_dir>'])
-    annotator = PointAnnotator()
+    args = docopt(__doc__, version='Point Annotator 0.1') 
+    reader = ann.DirectoryReader(args['<images_dir>'])
+    annotator = ann.annotators.PointAnnotator()
 
     for img_absolute_path in reader.all():
         points = annotator.run(img_absolute_path)
         print(f'Annotated points ({len(points)}): {points}')
-
-        # ground_truth_dir = os.path.join(reader.base_path, 'annotations')
-        # if not os.path.exists(ground_truth_dir):
-            # os.mkdir(ground_truth_dir)
-        # full_gt_path = os.path.join(ground_truth_dir, img_filename.split('.')[0] + '.csv')
-        # df_points = pd.DataFrame(centroids)
-        # df_points.to_csv(full_gt_path, header=False, index=False)

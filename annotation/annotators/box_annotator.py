@@ -10,8 +10,3 @@ class BoxAnnotator(Annotator):
 
     def run(self, img_absolute_path : str):
         raise NotImplementedError("BoxAnnotator is not yet implemented")
-        # image = Image.open(img_absolute_path)
-        # plt.imshow(image)
-        # points = plt.ginput(self.annotations_limit, timeout=self.window_timeout)
-        # plt.show()
-        # return points

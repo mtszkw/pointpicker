@@ -3,7 +3,7 @@
 
 # PointPicker
 
-Annotate **points** or **bounding boxes** in images using simple GUI. It runs on top of *matplotlib* so you don't need to install heavyweight GUI libraries to make it work. Mark points, zoom in and out and at the end save selected coordinates to CSV file. 
+Annotate **points** or **bounding boxes** (in progress) in images using simple GUI. It runs on top of *matplotlib* so you don't need to install heavyweight GUI libraries to make it work. Mark points, zoom in and out and at the end save selected coordinates to CSV file. 
 
 <p align="center">
   <img src="docs/pointpicker_gif.gif" width="640" height="430" alt="PointPicker"/>

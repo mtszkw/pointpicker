@@ -11,7 +11,7 @@ class PointAnnotator(Annotator):
         super().__init__(annotations_limit, window_timeout)
 
     def run(self, img_absolute_path : str):
-        image = Image.open(img_absolute_path)
+        image = Image.open(img_absolute_path).convert("RGB")
         plt.imshow(image)
         f = zoom_factory(self._ax, base_scale=1.5) 
         cid = self._fig.canvas.mpl_connect('button_press_event', self)

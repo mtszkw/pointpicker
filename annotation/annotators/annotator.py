@@ -14,6 +14,7 @@ class Annotator(ABC):
     def init_figure(self):
         self._fig = plt.figure()
         self._ax = self._fig.add_subplot(111)
+        self._fig.canvas.set_window_title('PointPicker')
 
     def update_title(self, title : str):
         self._ax.set_title(title, fontsize=10)

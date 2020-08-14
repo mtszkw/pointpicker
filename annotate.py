@@ -20,7 +20,7 @@ def write_points_csv(points, csv_path):
     df.to_csv(csv_path, header=False, index=False)
   
 if __name__ == '__main__':
-    args = docopt(__doc__, version='Point Annotation 0.1') 
+    args = docopt(__doc__, version='PointPicker 0.1') 
     reader = ann.DirectoryReader(args['<images_dir>'])
     annotator = ann.annotators.PointAnnotator()
 

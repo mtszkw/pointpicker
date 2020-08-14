@@ -1,13 +1,17 @@
 ![Flake8](https://github.com/mtszkw/image-annotation/workflows/Flake8/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Image Annotation
+# PointPicker
 
-Annotate **points** or **bounding boxes** in images using simple GUI (running on top of *matplotlib*).
+Annotate **points** or **bounding boxes** in images using simple GUI. It runs on top of *matplotlib* so you don't need to install heavyweight GUI libraries to make it work. Mark points, zoom in and out and at the end save selected coordinates to CSV file. 
+
+<p align="center">
+  <img src="docs/pointpicker_gif.gif" width="640" height="430" alt="PointPicker"/>
+</p>
 
 ## Installation
 
-Run `pip install requirements.txt` in your local environment.
+Run `pip install -r requirements.txt` in your local environment.
 
 ## Running
 
@@ -26,3 +30,4 @@ After you run the application, a window with your first image should pop-up. Use
 * *Left mouse-button* to select a point in image,
 * *Right mouse-button* to undo selection (can be used multiple times),
 * *Middle mouse-button* to accept existing selections and save them to file.
+* *Scroll down/up* to zoom in and out to be able to select points more precisely.

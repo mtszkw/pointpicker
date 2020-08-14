@@ -31,3 +31,5 @@ After you run the application, a window with your first image should pop-up. Use
 * *Right mouse-button* to undo selection (can be used multiple times),
 * *Middle mouse-button* to accept existing selections and save them to file.
 * *Scroll down/up* to zoom in and out to be able to select points more precisely.
+
+After you confirm selections using *Middle mouse-button* close the window to start processing next image.
